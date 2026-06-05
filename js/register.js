@@ -38,8 +38,8 @@ const registerUser = (e) => {
   })
     .then((response) => response.json())
     .then(() => {
-      alert("Registration successful! Please login.");
-      window.location.href = "login.html";
+      alert("Registration successful!");
+      window.location.href = "dashboard.html";
     });
 };
 registerForm.addEventListener("submit", registerUser);

@@ -1,1 +1,108 @@
-@use "./pages/register";
+@use "./register";
+@use"./dashboard";
+@use "./login";
+
+$primary-blue: #007bff;
+$dark-blue: #0056b3;
+$light-blue: #e7f1ff;
+$gray-text: #333;
+$gray-light: #f8f9fa;
+$gray-border: #e0e0e0;
+$white: #ffffff;
+$shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 20px;
+
+  #icon {
+    font-size: 32px;
+    color: $primary-blue;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 28px;
+    color: $primary-blue;
+  }
+
+  .navLinks {
+    margin-left: auto;
+    display: flex;
+    gap: 16px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: $primary-blue;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    #register-link {
+      background-color: $primary-blue;
+      color: $white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+   
+    #login-link{
+         color: $primary-blue;
+         border: 1px solid $primary-blue;
+            border-radius: 4px;
+            padding: 8px 16px;
+            text-decoration: none;
+    }
+   
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid $gray-border;
+  
+
+   .welcome-image {
+    max-width: 70%;
+    height: auto;
+    margin-top: 20px;
+   
+  }
+
+  h2 {
+    font-size: 36px;
+    color: $primary-blue;
+    margin: 0 0 16px 0;
+  }
+
+  p {
+    font-size: 18px;
+    color: $gray-text;
+    margin: 0;
+    max-width: 600px;
+  }
+
+  
+}
+
+.footer {
+  background-color: $gray-light;
+  border-top: 1px solid $gray-border;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+
+  p {
+    margin: 0;
+    color: $gray-text;
+    font-size: 14px;
+  }
+}
