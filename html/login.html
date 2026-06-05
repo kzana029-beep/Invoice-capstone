@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Login</title>
+</head>
+<body>
+     <header class="header">
+        <i  id="icon" class="fa-regular fa-file-lines"></i>
+        <h1>Invoice Tracker</h1>
+    </header>
+    <section class="login">
+  <i id="icon" class="fa-regular fa-file-lines"></i>
+  <h2>Invoice Tracker</h2>
+  <p class="login-text">Login to continue managing your invoices.</p>
+  <form action="" id="loginForm">
+    <label for="email">Email</label>
+    <div class="inputBox">
+      <i class="fa-regular fa-envelope"></i>
+      <input type="email" placeholder="Enter your email" id="email" required>
+    </div>
+
+    <label for="password">Password</label>
+    <div class="inputBox">
+      <i class="fa-solid fa-lock"></i>
+      <input type="password" placeholder="Enter your password" id="password" required>
+      <i class="fa-regular fa-eye" id="togglePassword"></i>
+    </div>
+
+    <button type="submit" class="loginBtn">Login</button>
+
+    <div class="divider">
+      <div class="line"></div>
+      <p>or</p>
+      <div class="line"></div>
+    </div>
+
+    <div class="register-link">
+      <p>
+        Don’t have an account?
+        <span>Register</span>
+      </p>
+    </div>
+  </form>
+</section>
+ <footer class="footer">
+        <p>&copy; 2024 Invoice Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
