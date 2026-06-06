@@ -49,6 +49,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
+  border-left: 4px solid #007bff;
 }
 .register form label {
   display: block;
@@ -168,33 +169,42 @@
 .register form .login-link {
   text-align: center;
 }
-.register form .login-link p {
+.register form .login-link a {
+  color: #007bff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+.register form .login-link a:hover {
+  color: #0056b3;
+}
+.register form .login-link a p {
   font-size: 14px;
   color: #333;
   margin: 0;
 }
-.register form .login-link p span {
+.register form .login-link a p span {
   color: #007bff;
   font-weight: 600;
   cursor: pointer;
   transition: color 0.3s ease;
 }
-.register form .login-link p span:hover {
+.register form .login-link a p span:hover {
   color: #0056b3;
 }
-
 @media (max-width: 600px) {
-  .register form {
+  .register .register form {
     padding: 30px 20px;
     max-width: 100%;
   }
-  .register h2 {
+  .register .register h2 {
     font-size: 24px;
   }
-  .register .register-text {
+  .register .register .register-text {
     font-size: 13px;
   }
 }
+
 .header {
   display: flex;
   align-items: center;
@@ -251,6 +261,7 @@
   border: 1px solid rgba(0, 123, 255, 0.12);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-left: 4px solid #007bff;
 }
 .login form:hover {
   transform: translateY(-2px);
@@ -327,7 +338,6 @@
   font-weight: 700;
   cursor: pointer;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
   box-shadow: 0 10px 18px rgba(0, 123, 255, 0.18);
   transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
 }
@@ -343,8 +353,17 @@
 .login form .register-link {
   text-align: center;
 }
+.login form .register-link a {
+  color: #007bff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+.login form .register-link a:hover {
+  color: #0056b3;
+}
 .login form .register-link p {
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
   margin: 0;
 }
