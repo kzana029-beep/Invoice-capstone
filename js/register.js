@@ -38,6 +38,7 @@ const registerUser = (e) => {
   })
     .then((response) => response.json())
     .then(() => {
+      localStorage.setItem("loggedUser", JSON.stringify(newUser));
       alert("Registration successful!");
       window.location.href = "dashboard.html";
     });

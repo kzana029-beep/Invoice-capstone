@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <header class="header">
+  <div class="left-header">
+    <i class="fa-solid fa-bars" id="burgerMenu"></i>
+    <h1>Invoice Tracker</h1>
+  </div>
+
+  <div class="user-info" id="userInfo">
+    <i class="fa-solid fa-circle-user" id="userIcon"></i>
+  <span  id="welcomeUser"></span>
+  <i class="fa-solid fa-chevron-down" id="profileArrow"></i>
+</div>
+
+    <div class="dropdown" id="dropdown">
+      <a href="login.html" id="switchAccount">Switch Account</a>
+      <button id="logoutBtn">Logout</button>
+    </div>
+</header>
+  <aside class="side-menu" id="sideMenu">
+  <a href="dashboard.html"> <i class="fa-solid fa-house"></i> Dashboard</a>
+  <a href="invoices.html"> <i class="fa-solid fa-file-invoice"></i> Invoices</a>
+  <a href="customers.html"> <i class="fa-solid fa-users"></i> Customers</a>
+  <a href="settings.html"> <i class="fa-solid fa-gear"></i> Settings</a>
+</aside>
+<div class="overlay" id="overlay"></div>
+    <main class="dashboard-main">
+  <section class="welcome-section">
+          <div class="profile" id="profile">
+  <i class="fa-solid fa-circle-user"></i>
+    <h2 id="dashboardWelcome"></h2>
+    <p>Here is a quick overview of your invoices and customers.</p>
+          </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="stat-card">
+      <i class="fa-regular fa-file-lines"></i>
+      <h3 id="totalInvoices">0</h3>
+      <p>Total Invoices</p>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-solid fa-users"></i>
+      <h3 id="totalCustomers">0</h3>
+      <p>Total Customers</p>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-regular fa-clock"></i>
+      <h3 id="pendingInvoices">0</h3>
+      <p>Pending Invoices</p>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <h3 id="overdueInvoices">0</h3>
+      <p>Overdue Invoices</p>
+    </div>
+  </section>
+
+  <section class="quick-actions">
+    <h2>Quick Actions</h2>
+
+    <div class="action-buttons">
+      <a href="create-invoice.html">Create Invoice</a>
+      <a href="customers.html">View Customers</a>
+      <a href="invoices.html">View Invoices</a>
+    </div>
+  </section>
+</main>
+    <footer class="footer">
+            <p>&copy; 2024 Invoice Tracker. All rights reserved.</p>
+        </footer>
+   <script src="../js/dashboard.js"></script>
+</body>
+</html>
