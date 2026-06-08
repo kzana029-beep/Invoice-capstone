@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Invoices</title>
+</head>
+<body>
+     <header class="header">
+  <div class="left-header">
+    <i class="fa-solid fa-bars" id="burgerMenu"></i>
+    <h1>Invoice Tracker</h1>
+  </div>
+
+  <div class="user-info" id="userInfo">
+    <i class="fa-solid fa-circle-user" id="userIcon"></i>
+  <span  id="welcomeUser"></span>
+  <i class="fa-solid fa-chevron-down" id="profileArrow"></i>
+</div>
+
+    <div class="dropdown" id="dropdown">
+      <a href="login.html" id="switchAccount">Switch Account</a>
+      <button id="logoutBtn">Logout</button>
+    </div>
+</header>
+  <aside class="side-menu" id="sideMenu">
+  <a href="dashboard.html"> <i class="fa-solid fa-house"></i> Dashboard</a>
+  <a href="invoices.html"> <i class="fa-solid fa-file-invoice"></i> Invoices</a>
+  <a href="customers.html"> <i class="fa-solid fa-users"></i> Customers</a>
+  <a href="settings.html"> <i class="fa-solid fa-gear"></i> Settings</a>
+</aside>
+<div class="overlay" id="overlay"></div>
+<main class="invoices-main">
+  <section class="invoices-header">
+    <h2>Invoices</h2>
+
+    <div class="invoice-actions">
+      <input type="text" id="searchInput" placeholder="Search invoices...">
+
+      <select id="statusFilter">
+        <option value="All">All Status</option>
+        <option value="Paid">Paid</option>
+        <option value="Pending">Pending</option>
+        <option value="Overdue">Overdue</option>
+      </select>
+
+      <a href="create-invoice.html" class="create-btn">
+        <i class="fa-solid fa-plus"></i>
+        Create Invoice
+      </a>
+    </div>
+  </section>
+
+  <section class="invoice-stats">
+    <div class="invoice-card">
+      <p>Total Invoices</p>
+      <h3 id="totalInvoices">0</h3>
+      <span>All time</span>
+    </div>
+
+    <div class="invoice-card paid">
+      <p>Paid</p>
+      <h3 id="paidInvoices">0</h3>
+      <span id="paidPercent">0% of total</span>
+    </div>
+
+    <div class="invoice-card pending">
+      <p>Pending</p>
+      <h3 id="pendingInvoices">0</h3>
+      <span id="pendingPercent">0% of total</span>
+    </div>
+
+    <div class="invoice-card overdue">
+      <p>Overdue</p>
+      <h3 id="overdueInvoices">0</h3>
+      <span id="overduePercent">0% of total</span>
+    </div>
+  </section>
+
+  <section class="invoice-table-section">
+    <table>
+      <thead>
+        <tr>
+          <th>Invoice ID</th>
+          <th>Client</th>
+          <th>Date</th>
+          <th>Due Date</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody id="invoiceTableBody"></tbody>
+    </table>
+  </section>
+</main>
+ <footer class="footer">
+        <p>&copy; 2024 Invoice Tracker. All rights reserved.</p>
+    </footer>
+    <script src="../js/invoices.js"></script>
+</body>
+</html>
