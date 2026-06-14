@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Create Invoice</title>
+</head>
+<body>
+      <header class="header">
+  <div class="left-header">
+    <i class="fa-solid fa-bars" id="burgerMenu"></i>
+    <h1>Invoice Tracker</h1>
+  </div>
+
+  <div class="user-info" id="userInfo">
+    <i class="fa-solid fa-circle-user" id="userIcon"></i>
+  <span  id="welcomeUser"></span>
+  <i class="fa-solid fa-chevron-down" id="profileArrow"></i>
+</div>
+
+    <div class="dropdown" id="dropdown">
+      <a href="settings.html" id="switchAccount">Settings</a>
+      <button id="logoutBtn">Logout</button>
+    </div>
+</header>
+  <aside class="side-menu" id="sideMenu">
+  <a href="dashboard.html"> <i class="fa-solid fa-house"></i> Dashboard</a>
+  <a href="invoices.html"> <i class="fa-solid fa-file-invoice"></i> Invoices</a>
+  <a href="customers.html"> <i class="fa-solid fa-users"></i> Customers</a>
+  <a href="settings.html"> <i class="fa-solid fa-gear"></i> Settings</a>
+  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+</aside>
+<div class="overlay" id="overlay"></div>
+<main class="create-main">
+  <h2>Create Invoice</h2>
+
+  <form id="invoiceForm" class="invoice-form">
+    <div class="form-grid">
+      <div>
+        <label>Invoice ID *</label>
+        <input type="text" id="invoiceId" placeholder="e.g., INV-1006" required>
+      </div>
+
+      <div>
+        <label>Issue Date *</label>
+        <input type="date" id="date" required>
+      </div>
+
+      <div>
+        <label>Client Name *</label>
+        <input type="text" id="client" placeholder="Enter client name" required>
+      </div>
+
+      <div>
+        <label>Due Date *</label>
+        <input type="date" id="dueDate" required>
+      </div>
+
+      <div>
+        <label>Email *</label>
+        <input type="email" id="email" placeholder="client@example.com" required>
+      </div>
+
+      <div class="amount-status">
+  <div>
+    <label>Amount *</label>
+    <input type="number" id="amount" placeholder="0.00" required>
+  </div>
+
+  <div>
+    <label>Status *</label>
+    <select id="status" required>
+      <option value="Pending">Pending</option>
+      <option value="Paid">Paid</option>
+      <option value="Overdue">Overdue</option>
+    </select>
+  </div>
+</div>
+    </div>
+
+    <label>Notes</label>
+    <textarea id="notes" placeholder="Add any notes or payment terms"></textarea>
+    <div class="invoice-items">
+  <h3>Invoice Items</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Service</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><input type="text" placeholder="e.g., Website Design"></td>
+      <td>
+  <input type="number" value="1" class="qty">
+</td>
+
+<td>
+  <input type="number" placeholder="0.00" class="price">
+</td>
+
+<td class="row-total">
+  $0.00
+</td>
+        <td><button type="button" class="delete-item">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="items-footer">
+    <button type="button" class="add-item">
+      <i class="fa-solid fa-plus"></i>
+      Add Item
+    </button>
+
+    <strong>Total Amount: <span>$0.00</span></strong>
+  </div>
+</div>
+
+    <div class="form-buttons">
+      <button type="submit">Save Invoice</button>
+      <a href="invoices.html">Cancel</a>
+    </div>
+  </form>
+</main>
+<footer class="footer">
+        <p>&copy; 2024 Invoice Tracker. All rights reserved.</p>
+    </footer>
+   <script src="../js/create-invoice.js"></script> 
+</body>
+</html>
