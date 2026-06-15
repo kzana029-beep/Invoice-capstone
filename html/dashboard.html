@@ -21,23 +21,31 @@
 </div>
 
     <div class="dropdown" id="dropdown">
-      <a href="login.html" id="switchAccount">Switch Account</a>
+      <a href="settings.html" id="switchAccount">Settings</a>
       <button id="logoutBtn">Logout</button>
     </div>
 </header>
   <aside class="side-menu" id="sideMenu">
-  <a href="dashboard.html"> <i class="fa-solid fa-house"></i> Dashboard</a>
+  <a href="dashboard.html" class="active">
+  <i class="fa-solid fa-house"></i>
+  Dashboard
+</a>
   <a href="invoices.html"> <i class="fa-solid fa-file-invoice"></i> Invoices</a>
-  <a href="customers.html"> <i class="fa-solid fa-users"></i> Customers</a>
+<a href="customers.html" id="customersLink">
+  <i class="fa-solid fa-users"></i>
+  Customers
+</a>
   <a href="settings.html"> <i class="fa-solid fa-gear"></i> Settings</a>
+ <button id="toggleSidebar" class="sidebar-toggle">
+  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+</button>
 </aside>
-<div class="overlay" id="overlay"></div>
     <main class="dashboard-main">
   <section class="welcome-section">
           <div class="profile" id="profile">
   <i class="fa-solid fa-circle-user"></i>
     <h2 id="dashboardWelcome"></h2>
-    <p>Here is a quick overview of your invoices and customers.</p>
+    <p>Here is a quick overview of your invoices.</p>
           </div>
   </section>
 
@@ -66,13 +74,26 @@
       <p>Overdue Invoices</p>
     </div>
   </section>
+  <section class="charts-section">
+
+  <div class="chart-card">
+    <h3>Revenue Overview</h3>
+    <canvas id="revenueChart"></canvas>
+  </div>
+
+  <div class="chart-card">
+    <h3>Invoice Status</h3>
+    <canvas id="statusChart"></canvas>
+  </div>
+
+</section>
 
   <section class="quick-actions">
     <h2>Quick Actions</h2>
 
     <div class="action-buttons">
       <a href="create-invoice.html">Create Invoice</a>
-      <a href="customers.html">View Customers</a>
+      <!-- <a href="customers.html">View Customers</a> -->
       <a href="invoices.html">View Invoices</a>
     </div>
   </section>
@@ -80,6 +101,7 @@
     <footer class="footer">
             <p>&copy; 2024 Invoice Tracker. All rights reserved.</p>
         </footer>
-   <script src="../js/dashboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/dashboard.js"></script>
 </body>
 </html>

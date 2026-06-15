@@ -4,16 +4,16 @@ const userInfo = document.getElementById("userInfo");
 const dropdown = document.getElementById("dropdown");
 const welcomeUser = document.getElementById("welcomeUser");
 
-const currentUser = JSON.parse(localStorage.getItem("loggedUser")) || {};
+let currentUser = JSON.parse(localStorage.getItem("loggedUser")) || {};
 
-welcomeUser.textContent = currentUser.name || currentUser.username || "User";
+welcomeUser.textContent = `Welcome, ${currentUser.fullName || currentUser.username || "User"} `;
 
 userInfo.addEventListener("click", () => {
   dropdown.classList.toggle("active");
 });
 
 document.getElementById("logoutBtn").addEventListener("click", () => {
-  localStorage.removeItem("loggedInUser");
+  localStorage.removeItem("loggedUser");
   window.location.href = "login.html";
 });
 
@@ -46,8 +46,9 @@ const calculateTotals = () => {
 addItemBtn.addEventListener("click", () => {
   itemCounter++;
 
-  tbody.innerHTML += `
-    <tr>
+  const newRow = document.createElement("tr");
+
+  newRow.innerHTML = `
       <td>${itemCounter}</td>
 
       <td>
@@ -71,8 +72,9 @@ addItemBtn.addEventListener("click", () => {
           Delete
         </button>
       </td>
-    </tr>
   `;
+
+  tbody.appendChild(newRow);
 
   addEvents();
 });
@@ -149,4 +151,12 @@ invoiceForm.addEventListener("submit", (e) => {
       alert("Invoice created successfully");
       window.location.href = "invoices.html";
     });
+});
+const sideMenu = document.getElementById("sideMenu");
+const toggleSidebar = document.getElementById("toggleSidebar");
+const createMain = document.querySelector(".create-main");
+
+toggleSidebar.addEventListener("click", () => {
+  sideMenu.classList.toggle("collapsed");
+  createMain.classList.toggle("expanded");
 });
