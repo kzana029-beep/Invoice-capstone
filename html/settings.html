@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Settings</title>
+</head>
+<body>
+     <header class="header">
+  <div class="left-header">
+    <i class="fa-solid fa-bars" id="burgerMenu"></i>
+    <h1>Invoice Tracker</h1>
+  </div>
+
+  <div class="user-info" id="userInfo">
+    <i class="fa-solid fa-circle-user" id="userIcon"></i>
+  <span  id="welcomeUser"></span>
+  <i class="fa-solid fa-chevron-down" id="profileArrow"></i>
+</div>
+
+    <div class="dropdown" id="dropdown">
+      <a href="settings.html" id="switchAccount">Settings</a>
+      <button id="logoutBtn">Logout</button>
+    </div>
+</header>
+  <aside class="side-menu" id="sideMenu">
+  <a href="dashboard.html">
+  <i class="fa-solid fa-house"></i>
+  Dashboard
+</a>
+  <a href="invoices.html"> <i class="fa-solid fa-file-invoice"></i> Invoices</a>
+<a href="customers.html" id="customersLink">
+  <i class="fa-solid fa-users"></i>
+  Customers
+</a>
+  <a href="settings.html" class="active"> <i class="fa-solid fa-gear"></i> Settings</a>
+ <button id="toggleSidebar" class="sidebar-toggle">
+  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+</button>
+</aside>
+<main class="settings-main">
+
+  <h2>Settings</h2>
+
+  <div class="settings-grid">
+
+    <!-- Profile -->
+    <div class="settings-card">
+      <h3>
+        <i class="fa-solid fa-user"></i>
+        Profile Information
+      </h3>
+
+      <form id="profileForm">
+        <input type="text" id="fullName" placeholder="Full Name">
+
+        <input type="email" id="email" placeholder="Email">
+
+        <button type="submit">
+          Save Changes
+        </button>
+      </form>
+    </div>
+
+    <!-- Password -->
+    <div class="settings-card">
+      <h3>
+        <i class="fa-solid fa-lock"></i>
+        Security & Password
+      </h3>
+
+      <form id="passwordForm">
+        <input
+          type="password"
+          id="currentPassword"
+          placeholder="Current Password"
+        >
+
+        <input
+          type="password"
+          id="newPassword"
+          placeholder="New Password"
+        >
+
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Confirm Password"
+        >
+
+        <button type="submit">
+          Change Password
+        </button>
+      </form>
+    </div>
+
+    <!-- Account -->
+    <div class="settings-card">
+      <h3>
+        <i class="fa-solid fa-circle-info"></i>
+        Account Information
+      </h3>
+
+      <p><strong>Role:</strong> <span id="userRole"></span></p>
+
+      <p><strong>User ID:</strong> <span id="userId"></span></p>
+
+      <p><strong>Status:</strong> Active</p>
+    </div>
+
+  </div>
+
+</main>
+ <footer class="footer">
+            <p>&copy; 2024 Invoice Tracker. All rights reserved.</p>
+        </footer>
+    <script src="../js/settings.js"></script>
+</body>
+</html>

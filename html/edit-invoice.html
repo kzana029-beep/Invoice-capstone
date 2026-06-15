@@ -31,12 +31,97 @@
   Dashboard
 </a>
   <a href="invoices.html"> <i class="fa-solid fa-file-invoice"></i> Invoices</a>
-  <a href="customers.html"> <i class="fa-solid fa-users"></i> Customers</a>
+ <a href="customers.html" id="customersLink">
+  <i class="fa-solid fa-users"></i>
+  Customers
+</a>
   <a href="settings.html"> <i class="fa-solid fa-gear"></i> Settings</a>
  <button id="toggleSidebar" class="sidebar-toggle">
   <i class="fa-solid fa-arrow-right-arrow-left"></i>
 </button>
 </aside>
+<main class="edit-invoice-main">
+
+  <a href="invoices.html" class="back-link">
+    <i class="fa-solid fa-arrow-left"></i>
+    Back to Invoices
+  </a>
+
+  <h2>Edit Invoice</h2>
+
+  <div class="edit-card">
+
+    <form id="editInvoiceForm">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Invoice ID</label>
+          <input type="text" id="invoiceId">
+        </div>
+
+        <div class="form-group">
+          <label>Client Name</label>
+          <input type="text" id="client">
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email">
+        </div>
+
+        <div class="form-group">
+          <label>Issue Date</label>
+          <input type="date" id="date">
+        </div>
+
+        <div class="form-group">
+          <label>Due Date</label>
+          <input type="date" id="dueDate">
+        </div>
+
+        <div class="form-group">
+          <label>Amount</label>
+          <input type="number" id="amount">
+        </div>
+
+        <div class="form-group full-width">
+          <label>Status</label>
+
+          <select id="status">
+            <option value="Paid" id="paid">Paid</option>
+            <option value="Pending" id="pending">Pending</option>
+            <option value="Overdue" id="overdue">Overdue</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label>Notes</label>
+          <textarea id="notes"></textarea>
+        </div>
+
+      </div>
+
+      <div class="form-footer">
+
+        <button type="button" class="cancel-btn">
+          Cancel
+        </button>
+
+        <button type="submit" class="update-btn">
+          Update Invoice
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</main>
+<footer class="footer">
+        <p>&copy; 2024 Invoice Tracker. All rights reserved.</p>
+    </footer>
     <script src="../js/edit-invoice.js"></script>
 </body>
 </html>
